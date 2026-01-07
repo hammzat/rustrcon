@@ -337,7 +337,7 @@ function RconDashboard() {
                   </div>
 
                   <a
-                    href="https://github.com/aristocratos"
+                    href="https://github.com/hammzat/rustrcon"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex gap-3 items-center opacity-75 hover:opacity-100 transition-opacity group cursor-pointer"
