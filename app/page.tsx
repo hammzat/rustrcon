@@ -140,9 +140,9 @@ function RconDashboard() {
         {/* Контент сайта */}
         <div className="flex-1 bg-zinc-900/40 rounded-2xl border border-zinc-800/60 shadow-xl overflow-hidden flex flex-col relative group hover:border-zinc-700/60 transition-colors duration-300">
           {showHelp && (
-            <div className="absolute inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-200">
+            <div className="fixed inset-0 z-100 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-200">
               <div className="w-full max-w-lg bg-zinc-900 border border-zinc-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
-                <div className="p-5 border-b border-zinc-800 flex justify-between items-center bg-zinc-900/50">
+                <div className="p-5 border-b border-zinc-800 flex justify-between items-center bg-zinc-900/50 shrink-0">
                   <h3 className="font-bold text-white flex items-center gap-2">
                     <ShieldAlert className="text-amber-500" size={20} />
                     Разрешение подключения

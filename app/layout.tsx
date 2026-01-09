@@ -85,6 +85,25 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Rust RCON Client",
+  applicationCategory: "UtilitiesApplication",
+  operatingSystem: "Web",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  author: {
+    "@type": "Person",
+    name: "aristocratos",
+    url: "https://aristocratos.ru",
+  },
+  description: "Безопасный веб-клиент RCON для управления серверами Rust.",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -97,6 +116,10 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );
