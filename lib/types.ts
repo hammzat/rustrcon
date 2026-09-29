@@ -9,7 +9,7 @@ export type LogType =
   | "success";
 
 export interface LogEntry {
-  id: string;
+  id: number;
   timestamp: string;
   message: string;
   type: LogType;
@@ -32,6 +32,8 @@ export interface RconContextType {
   isConnected: boolean;
   isConnecting: boolean;
   connectionError: string | null;
+  /** Адрес сервера, к которому подключены (или подключаемся) */
+  target: string | null;
   logs: LogEntry[];
   connect: (config: RconConfig) => void;
   disconnect: () => void;
